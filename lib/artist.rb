@@ -8,7 +8,7 @@ attr_accessor :name
 @@all<<self
   end
 
-  def new_song(genre, name)
+  def new_song(name,genre)
 Song.new(name, self, genre)
   end
 def songs
@@ -20,8 +20,8 @@ end
 
 def genres
 
-  songs.map do |song1|
-      song1.genre
+  songs.map do |song|
+      song.genre
     end
 end
 def self.all
